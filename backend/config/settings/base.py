@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -18,9 +19,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "channels",
     "django_prometheus",
-    "apps.core",
-    "apps.presentations",
-    "apps.votes",
+    "apps.core.apps.CoreConfig",
+    "apps.presentations.apps.PresentationsConfig",
+    "apps.votes.apps.VotesConfig",
 ]
 
 MIDDLEWARE = [
