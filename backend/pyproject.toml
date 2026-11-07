@@ -39,11 +39,24 @@ dev = [
 [tool.ruff]
 line-length = 88
 target-version = "py312"
-exclude = ["migrations", ".venv"]
+exclude = ["migrations", ".venv", "staticfiles"]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "B", "DJ", "S"]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "DJ",
+    "S"
+]
 ignore = ["DJ001"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [tool.bandit]
 exclude_dirs = ["tests", "migrations", ".venv"]
